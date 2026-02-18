@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Bocanada - Gustavo Cerati</title>
+  <script src="js/prueba.js"></script>
+  <link href="css/styles1.css" rel="stylesheet" />
+  <link href="css/styles2.css" rel="stylesheet" />
+  <link href="css/styles3.css" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#38e07b",
+            "background-light": "#f6f8f7",
+            "background-dark": "#0d1410",
+          },
+          fontFamily: {
+            "display": ["Spline Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Spline Sans', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .fill-icon {
+      font-variation-settings: 'FILL' 1;
+    }
+
+    .album-gradient {
+      background: linear-gradient(180deg, rgba(56, 224, 123, 0.15) 0%, transparent 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white overflow-x-hidden">
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Navigation Bar -->
+    <header
+      class="flex items-center justify-between flex-wrap gap-4 border-b border-white/5 px-4 sm:px-10 py-4 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="bg-primary rounded-lg p-1.5">
+            <span class="material-symbols-outlined text-black font-bold">graphic_eq</span>
+          </div>
+          <h2 class="text-white text-xl font-bold tracking-tight">SoundWave</h2>
+        </a>
+        <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+          <div class="flex w-full flex-1 items-stretch rounded-full h-full bg-white/10">
+            <div class="text-white/40 flex items-center justify-center pl-4">
+              <span class="material-symbols-outlined text-xl">search</span>
+            </div>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-white placeholder:text-white/30 px-4 pl-2 text-sm font-normal"
+              placeholder="Buscar artistas, canciones o álbumes" value="" />
+          </div>
+        </label>
+      </div>
+      <div class="flex flex-1 justify-end gap-8 items-center">
+        <nav class="hidden sm:flex items-center gap-9">
+          <a class="text-white text-sm font-medium hover:text-primary transition-colors" href="index.html">Inicio</a>
+          <a class="text-white/50 text-sm font-medium hover:text-white transition-colors" href="#">Explorar</a>
+          <a class="text-white/50 text-sm font-medium hover:text-white transition-colors"
+            href="playlist.html">Librería</a>
+        </nav>
+        <div class="flex gap-3">
+          <button
+            class="flex items-center justify-center rounded-full h-10 w-10 bg-white/10 text-white hover:bg-white/20 transition-all">
+            <span class="material-symbols-outlined text-xl">notifications</span>
+          </button>
+          <button
+            class="flex items-center justify-center rounded-full h-10 w-10 bg-white/10 text-white hover:bg-white/20 transition-all">
+            <span class="material-symbols-outlined text-xl">settings</span>
+          </button>
+        </div>
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 border-2 border-primary/20"
+          data-alt="User profile avatar portrait"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwmuwes1Rp2P6zz9dPFdSxCUJbK1zEMqA0DMEYt12w0npbkQRF4GoBO_Rdc60YQpJ83zfUCPI1f2o6n0i8iGE9Fopg6TJTky_PDXqilLRhL0wdBrN4jP91DgXacEpyT4G2Stc0V7HQLyN2EDyvEGsW3ZVYP94d5v0RP_EvaDLM2zG2NfkMZ-QmO3UXVgmnpx2ibah6lFB_3c1oWpGWTC5W02ZtJmcX1zBdLUJvNp9MO845e6rxFS5OCb5vSeo4pZAREavXvzojl8Q');">
+        </div>
+      </div>
+    </header>
+    <main class="flex-1 flex flex-col pb-32">
+      <!-- Hero Album Section -->
+      <div class="album-gradient pt-8 sm:pt-12 pb-8 px-4 sm:px-10 md:px-20 lg:px-40">
+        <div class="flex flex-col md:flex-row items-end gap-8">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-2xl w-48 sm:w-64 min-h-0 shrink-0"
+            data-alt="Bocanada album cover by Gustavo Cerati" style="background-image: url('bocanada.png');">
+          </div>
+          <div class="flex flex-col gap-2 flex-1 pb-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary">Álbum</span>
+            <h1 class="text-white text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight">Bocanada
+            </h1>
+            <div class="flex items-center gap-2 mt-4">
+              <div class="w-6 h-6 rounded-full bg-cover" data-alt="Gustavo Cerati"
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png');">
+              </div>
+              <p class="text-white text-base font-bold leading-normal">Gustavo Cerati</p>
+              <span class="text-white/50 text-base">• 1999 • 13 canciones, 57 min</span>
+            </div>
+            <p class="text-white/50 text-sm sm:text-lg font-normal leading-normal mt-2 max-w-2xl">Lanzado en 1999,
+              Bocanada marcó
+              el inicio formal de la carrera solista de Gustavo Cerati tras la separación de Soda Stereo,
+              consolidándose
+              como un manifiesto de libertad creativa y sofisticación sonora.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Action Bar -->
+      <div class="px-4 sm:px-10 md:px-20 lg:px-40 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <button
+            class="flex w-14 h-14 cursor-pointer items-center justify-center rounded-full bg-primary text-black hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined fill-icon text-3xl">play_arrow</span>
+          </button>
+          <button class="flex flex-col items-center gap-1 group">
+            <div class="rounded-full bg-white/10 p-3 text-white/50 group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">favorite</span>
+            </div>
+          </button>
+          <button class="flex flex-col items-center gap-1 group">
+            <div class="rounded-full bg-white/10 p-3 text-white/50 group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">download</span>
+            </div>
+          </button>
+          <button class="flex flex-col items-center gap-1 group">
+            <div class="rounded-full bg-white/10 p-3 text-white/50 group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">more_horiz</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- Tracklist Table -->
+      <div class="px-4 sm:px-10 md:px-20 lg:px-40">
+        <div class="overflow-x-auto rounded-xl border border-white/5 bg-white/5">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-white/10 bg-white/5">
+                <th class="px-6 py-4 text-white/40 text-sm font-medium uppercase tracking-wider w-16">#</th>
+                <th class="px-6 py-4 text-white/40 text-sm font-medium uppercase tracking-wider">Título</th>
+                <th
+                  class="px-6 py-4 text-white/40 text-sm font-medium uppercase tracking-wider hidden sm:table-cell text-right">
+                  Reproducciones</th>
+                <th class="px-6 py-4 text-white/40 text-sm font-medium uppercase tracking-wider text-right w-32">
+                  <span class="material-symbols-outlined text-xl">schedule</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <!-- Row 1 -->
+              <tr class="group hover:bg-white/10 transition-colors cursor-pointer">
+                <td class="px-6 py-4 text-white/40 text-sm font-normal">
+                  <span class="group-hover:hidden">1</span>
+                  <span class="material-symbols-outlined hidden group-hover:inline text-primary">play_arrow</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex flex-col">
+                    <span class="text-white text-base font-medium">Puente</span>
+                    <span class="text-white/50 text-xs">Gustavo Cerati</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right hidden sm:table-cell">1,204,500</td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right">3:45</td>
+              </tr>
+              <!-- Row 2 -->
+              <tr class="group hover:bg-white/10 transition-colors cursor-pointer">
+                <td class="px-6 py-4 text-white/40 text-sm font-normal">
+                  <span class="group-hover:hidden">2</span>
+                  <span class="material-symbols-outlined hidden group-hover:inline text-primary">play_arrow</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex flex-col">
+                    <span class="text-white text-base font-medium">Paseo Inmoral</span>
+                    <span class="text-white/50 text-xs">Gustavo Cerati</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right hidden sm:table-cell">980,200</td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right">4:12</td>
+              </tr>
+              <!-- Row 3 -->
+              <tr class="group hover:bg-white/10 transition-colors cursor-pointer">
+                <td class="px-6 py-4 text-white/40 text-sm font-normal">
+                  <span class="group-hover:hidden">3</span>
+                  <span class="material-symbols-outlined hidden group-hover:inline text-primary">play_arrow</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex flex-col">
+                    <span class="text-white text-base font-medium">Bocanada</span>
+                    <span class="text-white/50 text-xs">Gustavo Cerati</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right hidden sm:table-cell">850,000</td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right">3:58</td>
+              </tr>
+              <!-- Row 4 -->
+              <tr class="group hover:bg-white/10 transition-colors cursor-pointer">
+                <td class="px-6 py-4 text-white/40 text-sm font-normal">
+                  <span class="group-hover:hidden">4</span>
+                  <span class="material-symbols-outlined hidden group-hover:inline text-primary">play_arrow</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex flex-col">
+                    <span class="text-white text-base font-medium">Engaña</span>
+                    <span class="text-white/50 text-xs">Gustavo Cerati</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right hidden sm:table-cell">1,100,300</td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right">4:05</td>
+              </tr>
+              <!-- Row 5 -->
+              <tr class="group hover:bg-white/10 transition-colors cursor-pointer">
+                <td class="px-6 py-4 text-white/40 text-sm font-normal">
+                  <span class="group-hover:hidden">5</span>
+                  <span class="material-symbols-outlined hidden group-hover:inline text-primary">play_arrow</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex flex-col">
+                    <span class="text-white text-base font-medium">Aquí y Ahora</span>
+                    <span class="text-white/50 text-xs">Gustavo Cerati</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right hidden sm:table-cell">720,400</td>
+                <td class="px-6 py-4 text-white/50 text-sm text-right">3:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <!-- Media Player Footer -->
+    <footer
+      class="fixed bottom-0 left-0 w-full bg-black/95 border-t border-white/5 px-2 sm:px-4 h-20 sm:h-24 flex items-center justify-between z-20">
+      <!-- Track Info -->
+      <div class="flex items-center gap-2 sm:gap-4 w-auto sm:w-[30%] min-w-0">
+        <div class="w-10 h-10 sm:w-14 sm:h-14 rounded shadow-md bg-center bg-cover shrink-0"
+          data-alt="Frank Sinatra album cover" style="background-image: url('sinatra.webp');">
+        </div>
+        <div class="flex flex-col justify-center overflow-hidden">
+          <p class="text-sm font-bold truncate hover:underline cursor-pointer">I've Got You Under My Skin</p>
+          <p class="text-xs text-white/60 truncate hover:underline cursor-pointer">Frank Sinatra</p>
+        </div>
+        <button class="text-white/60 hover:text-white ml-2 hidden sm:block"><span
+            class="material-symbols-outlined text-xl">favorite</span></button>
+        <button class="text-white/60 hover:text-white hidden sm:block"><span
+            class="material-symbols-outlined text-xl">picture_in_picture_alt</span></button>
+      </div>
+      <!-- Controls -->
+      <div class="flex flex-col items-center gap-1 sm:gap-2 flex-1 sm:flex-none sm:max-w-[40%] sm:w-full min-w-0">
+        <div class="flex items-center gap-3 sm:gap-6">
+          <button class="text-white/40 hover:text-white transition-colors hidden sm:block"><span
+              class="material-symbols-outlined text-xl">shuffle</span></button>
+          <button class="text-white/60 hover:text-white transition-colors"><span
+              class="material-symbols-outlined text-3xl">skip_previous</span></button>
+          <button
+            class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined fill-icon text-3xl">play_circle</span>
+          </button>
+          <button class="text-white/60 hover:text-white transition-colors"><span
+              class="material-symbols-outlined text-3xl">skip_next</span></button>
+          <button class="text-white/40 hover:text-white transition-colors hidden sm:block"><span
+              class="material-symbols-outlined text-xl">repeat</span></button>
+        </div>
+        <div class="hidden sm:flex items-center gap-2 w-full">
+          <span class="text-[10px] text-white/40 font-medium">1:24</span>
+          <div class="h-1 flex-1 bg-white/10 rounded-full relative group cursor-pointer">
+            <div class="absolute left-0 top-0 h-full bg-primary w-1/3 rounded-full group-hover:bg-primary">
+            </div>
+            <div
+              class="absolute left-1/3 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 shadow-lg">
+            </div>
+          </div>
+          <span class="text-[10px] text-white/40 font-medium">3:45</span>
+        </div>
+      </div>
+      <!-- Volume and Other Controls -->
+      <div class="hidden sm:flex items-center justify-end gap-3 w-[30%]">
+        <button class="text-white/60 hover:text-white"><span
+            class="material-symbols-outlined text-xl">mic</span></button>
+        <button class="text-white/60 hover:text-white"><span
+            class="material-symbols-outlined text-xl">queue_music</span></button>
+        <button class="text-white/60 hover:text-white"><span
+            class="material-symbols-outlined text-xl">important_devices</span></button>
+        <div class="flex items-center gap-2 w-24 group cursor-pointer">
+          <span class="material-symbols-outlined text-white/60 text-xl group-hover:text-white">volume_up</span>
+          <div class="h-1 flex-1 bg-white/10 rounded-full relative">
+            <div class="absolute left-0 top-0 h-full bg-white/60 w-3/4 rounded-full group-hover:bg-primary">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
